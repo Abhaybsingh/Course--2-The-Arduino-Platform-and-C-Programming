@@ -1,0 +1,26 @@
+
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  Serial.begin(9600);
+  pinMode(13, OUTPUT);
+  digitalWrite(13, LOW); 
+}
+
+// the loop function runs over and over again forever
+
+void loop() 
+{
+
+ char i = '0';
+ i = Serial.read();
+ 
+ if(i == '1')
+ {
+  digitalWrite(13, HIGH);   
+ }
+ else if(i == '0')
+ {
+  digitalWrite(13, LOW);    
+ } 
+  
+}
